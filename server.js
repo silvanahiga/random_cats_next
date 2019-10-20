@@ -19,6 +19,17 @@ app.prepare().then(() => {
   server.use(bodyParser.urlencoded({ extended: false }));
   server.use(cookieParser());
 
+
+  server.get("/gatitos", (req, res) => {
+    return app.render(req, res, "/cats", req.query)
+
+  })
+
+  server.get("/gatitos/:item", (req, res) => {  //ruta dinamica
+    return app.render(req, res, "/user", req.query)
+
+  })
+
   server.get("*", (req, res) => {
     return handle(req, res);
   });
