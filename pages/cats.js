@@ -52,7 +52,7 @@ class Cats extends React.Component {
       <div className="wrap">
         <div className="group_buttons">
           <h2>RANDOM CATS</h2>
-          <button className="button" name="gatitos" onClick={(e) => this.handleClick(e)}>traer gatito</button>
+          <button className="button" name="gatitos" onClick={(e) => this.handleClick(e)}>gatito</button>
           <button className="button" name="1" onClick={(e) => this.handleCat(e)}>gatitos con gorros</button>
           <button className="button" name="4" onClick={(e) => this.handleCat(e)}>gatitos con anteojos</button>
           <button className="button" name="2" onClick={(e) => this.handleCat(e)}>gatitos espaciales</button>
@@ -81,6 +81,7 @@ class Cats extends React.Component {
           .box{
             width:400px;
             height: 500px;
+            background-image:initial;
             margin:100px;
           
 
@@ -88,10 +89,11 @@ class Cats extends React.Component {
           }
 
           .wrap{
-            display:flex;
-            justify-content:center;
-            flex-direction:column;
-            aling-items:center;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column
 
           }
           `}
